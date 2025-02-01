@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+
+    <h2>표과제 시작</h2>
+    <table class="">
+        <caption></caption>
+        <colgroup>
+            <col style="width:" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th></th>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table class="클래스명">
+        <caption>표의제목</caption>
+        <colgroup>
+            <col style="width:" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+        <table class="type2">
+            <caption>title2</caption>
+            <colgroup>
+                <col style="width:" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    
+
+
+
+    <h2>열의 병합 colspan</h2>
+    <table border="1" width="300px">
+        <tr>
+            <td colspan="3">1</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td colspan="2">7</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+
+    <h2>행의 병합 rowspan</h2>
+    <table border="1" width="300px">
+        <tr>
+            <td rowspan="3">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td rowspan="2">7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+
+    <h2>행의 병합 rowspan</h2>
+    <h3>새만금 스마트 수변도시 홍보 리플릿</h3>
+    <table border="1" width="100%">
+        <colgroup>
+            <col style="width:278px">
+            <col>
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>작성자</th>
+                <td>총관리자</td>
+            </tr>
+            <tr>
+                <th>등록일</th>
+                <td>2024.03.07</td>
+            </tr>
+            <tr>
+                <th>조회수</th>
+                <td>122</td>
+            </tr>
+            <tr>
+                <td colspan="2">새만금 스마트 수변도시 홍보 리플릿입니다.</td>
+            </tr>
+            <tr>
+                <th>첨부파일</th>
+                <td>
+                    <a href="" download>
+                        <img src="/images/ico_download2.svg" alt="">
+                        <span>새만금 스마트 수변도시 홍보 리플릿.pdf</span><span>(다운로드:60회)</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="">목록</a>
+
+    <br>
+    <br>
+
+    <h2>표5</h2>
+    <table border="1" width="100%">
+        <caption>
+            국내동향
+        </caption>
+        <colgroup>
+            <col>
+            <col style="width: 150px">
+            <col style="width: 100px">
+            <col style="width: 145px">
+            <col style="width: 80px">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>종목/지수명</th>
+                <th>지수</th>
+                <th>전일대비</th>
+                <th>등락률(%)</th>
+                <th>날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>셀트리온</td>
+                <td>176,200</td>
+                <td>
+                    <img src="/images/ico_triangle_down.svg" alt="하락">
+                    <span>1,100</span>
+                </td>
+                <td>-0.62%</td>
+                <td>05/31</td>
+            </tr>
+            <tr>
+                <td>KOSPI</td>
+                <td>2,636.52</td>
+                <td>
+                    <img src="/images/ico_triangle_up.svg" alt="상승">
+                    <span>1.08</span>
+                </td>
+                <td>+0.04%</td>
+                <td>05/31</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>표1</h2>
+    <table border="1" width="100%">
+        <caption>
+            채용공고게시판 리스트
+        </caption>
+        <colgroup>
+            <col style="width: 198px">   
+            <col>   
+            <col style="width: 122px">   
+            <col style="width: 211px">   
+        </colgroup>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>제목</th>
+                <th>첨부</th>
+                <th>등록일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>공지</td>
+                <td><a href="">[채용공고] 채권운용본부 크레딧애널리스트 경력직 채용</a></td>
+                <td><a href="" download><img src="/images/ico_download.svg" alt="첨부파일"></a></td>
+                <td>2024-04-19</td>
+            </tr>
+            <tr>
+                <td colspan="4">현재 게시물이 존재하지 않습니다.</td>
+            </tr>
+            <!-- 개발자가 경우에 따라 다르게 노출시킬 것임 -->
+        </tbody>
+
+    </table>
+    <!-- 더보기: 클릭시 더 load를 시키는 것. 기능이기 때문에 table 바깥에 넣어야한다.-->
+    <button type="button">더보기 (10/100) <img src="/images/ico_more.svg" alt="더보기"> </button>
+
+
+    <table border="1" width="100%">
+        <caption>
+            웹퍼블리셔 교육
+        </caption>
+        <colgroup>
+            <col style="width:20%"/>
+            <col style="width:20%"/>
+            <col style="width:20%"/>
+            <col style="width:20%"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>교육일지</th>
+                <th>수강생</th>
+                <th>지역</th>
+                <th>만족도</th>
+            </tr>
+        </thead>
+        <!-- <tbody> -->
+            <tr>
+                <td>8월 3일</td>
+                <td>20명</td>
+                <td>서울</td>
+                <td>상</td>
+            </tr>
+            <tr>
+                <td>9월 5일</td>
+                <td>10명</td>
+                <td>경기</td>
+                <td>상</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td>30명</td>
+                <td>-</td>
+                <td>상</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+</body>
+</html>

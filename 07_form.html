@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온라인서식</title>
+</head>
+<body>
+    <!-- form태그는 기본적으로 감싸는게 좋지만, 어디까지 form으로 감싸야 하는지는 개발자와 소통하는게 좋다. 
+    기능 하나 당 form하나. 검색기능의 form-->
+    <h2>폼</h2>
+    <form action="">
+        <fieldset>
+            <legend>게시물검색</legend>
+            <select name="" id="">
+                <option value="">제목</option>
+            </select>
+            <input type="search" name="" id="" placeholder="검색어를 입력해 주세요.">
+            <button type="submit">검색</button>
+            <!-- 데이터를 전달시켜야 하니 type=submit -->
+        </fieldset>
+    </form>
+
+    <ul>
+        <!-- ul 안에는 li만 올 수 있다. 다른건 올 수 없다. li형제만 올 수 있다. -->
+        <li><span>담당부서</span>경영지원실</li>
+        <li><span>뷰어다운</span><span><img src="/images/ico_form8_1.svg" alt="">한글뷰어</span><span><img src="/images/ico_form8_2.svg" alt="">한글뷰어</span></li>
+        <li><span>만족도</span>
+            <span>페이지의 내용이나 사용편의성에 대해 만족하십니까?</span>
+            <form action="">
+                <fieldset>
+                    <!--br은 텍스트 안에서 개행하는 목적. br은 텍스트 전용이다 -->
+                    <legend>만족도 조사</legend>
+                    <div>
+                        <span>
+                            😎
+                            <input type="radio" name="group" id="a">
+                            <label for="a">매우만족</label>
+                        </span>
+                        <span>
+                            😎
+                            <input type="radio" name="group" id="b">
+                            <label for="b">만족</label>
+                        </span>
+                        <span>
+                            😎
+                            <input type="radio" name="group" id="c">
+                            <label for="c">보통</label>
+                        </span>
+                        <span>
+                            😎
+                            <input type="radio" name="group" id="d">
+                            <label for="d">불만족</label>
+                        </span>
+                        <span>
+                            😎
+                            <input type="radio" name="group" id="e">
+                            <label for="e">매우불만족</label>
+                        </span>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="여러분의 소중한 의견을 보내주세요">
+                        <button type="submit">입력</button>
+                    </div>
+                </fieldset>
+            </form>
+        </li>
+    
+    </ul>
+    
+
+
+    <h2>공통속성</h2>
+    <input type="text" name="" id=""value="입력된 값">
+    <input type="radio" name="" id="" value="">
+    <!-- value:초기값.input에 공통적으로 가져올 수 있다.  체크되는 것들은 value값이 표현되지는 않지만 개발자들이 쓴다. 데이터의 이름을 가져오기 위해서. -->
+    <br>
+    <input type="text" name="" id="" placeholder="비밀번호8자리입력">
+    <br>
+    <form action="">
+        <input type="text" name="" id="" required><br>
+        <input type="email" name="" id="" required><br>
+        <!-- required 필수입력일 때 넣기. 유효성 검사할 때 좋다. form으로 감싼 후 required를 넣어야 툴팁이 뜬다. 
+            form안에 required넣을 시, 전송버튼 눌러도 다음으로 안넘어감. required안쓰면 스크립트로 @넣었는지 체크 계속 해줘야함. -->
+        <button>전송</button>
+    </form>
+    <br>
+    <br>
+    <input type="text" name="" id="" value="" disabled>비활성<br>
+    <!-- 개발입장:disabled 데이터 접근 불가. 색상을 오퍼시티로 많이 넣음. 
+                readonly 데이터 접근 가능 -->
+    <input type="text" name="" id="" value=""readonly>읽기전용<br>
+    <br>
+    <br>
+    <input type="text" name="" id="" autofocus>초점이동
+    <!-- 서식 관련된거면 초점이동 다 가능. 페이지 로드될 때 autofocus넣으면 스크립트 안넣어도됨  -->
+    <br>
+    <input type="text" minlength="5" maxlength="10"> 최소/최대 글자수
+    <!-- minlength최소글자수, maxlength최대글자수 -->
+    <br>
+    <input type="number" name="" id="" min="0" max="10">
+    <!-- min최소숫자, max최대숫자. 스피너조절시 쉽게 확인 가능 -->
+    <br>
+    <input type="date" name="" id="" min="2025-02-08" max="2025-02-21">
+    <!-- min, max날짜 선택범위 설정 디자인은 안됨. 빨간날 표시안됨.-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>폼2</h2>
+    <form action="">
+        <fieldset>
+            <legend>제목</legend>
+            <!-- fieldset, legend는 필수요소는 아님. -->
+            <ul>
+                <li><input type="text">한줄 글상자</li>
+                <!-- 두줄 이상은 안됨. form을 감싼부분 안쪽에 서식이 있을 경우, 자동으로 전송된다.  -->
+                <li><input type="password" name="" id="">암호화된 글상자</li>
+                <!-- 동그라미는 디자인 못바꾼다. font-size로 크기는 바꿀 수 있다. 개발자들은 native를 젤 좋아한다. 이미 기능이 좋다. -->
+                <li><input type="file" name="" id="">첨부파일</li>
+                <!-- 첨부파일 선택시 라이브러리 선택 안나왔는데 이제는 나온다 -->
+                <li><input type="url" name="" id="">주소입력</li>
+                <!-- url전용input에 .com, www사용할 수 있다 -->
+                <li><input type="email" name="" id="">이메일입력</li>
+                <!-- 키보드에 @, .com떠서 사용성에 좋음. @넣어서 input두개 만들지 않아도 됨 -->
+                <li><input type="number" name="" id="">숫자입력</li>
+                <!-- 안드로이드는 키보드가 숫자키판으로 바뀜. 아이폰은 윗줄로. pc는 스피너가 나옴 -->
+                <li><input type="tel" name="" id="">전화번호</li>
+                <!-- 숫자 키패드가 나옴. 하지만 이 키패드가 좋다고(아이폰)해서 숫자입력에 tel을 넣으면 안됨 -->
+                <li><input type="search" name="" id="">검색어 입력</li>
+                <!-- 모두 외관은 input박스로만 보임. 하지만 모바일은 다르기 때문에 받는 서식이 뭔지, 목적에 맞게 type넣어야함 -->
+                <li><input type="date" name="" id="">달력</li>
+                <!-- 리액트에서는 셀프클로징 안넣으면 오류뜸. 넣으나 안넣으나 상관은 없지만 
+                xhtml에서는 넣어야했음. 지금은 html, xhtml통합했기 때문에 기본으로는 넣는것으로 하자. -->
+                <!-- type="datetime"거의 안써서 패스 -->
+                <!-- 오늘 이전날짜 선택 못하게도 가능. 최대날짜도 정할 수 있다(범위지정). disabled로. 드래그로 선택하는건 안됨 -->
+                <li><textarea name="" id="" cols="10" rows="5">여러줄 입력상자</textarea></li>
+                <!-- 
+                    cols10면 10글자이지만 언어마다 다르다(더 들어갈수도)너비값은 고정가능
+                rows는 줄 개수. 보통 안쓴다. -->
+                <li><input type="range" name="" id="">핸들링</li>
+                <!-- 핸들링, 게이지, 배경 모두 커스텀 가능 -->
+                <li><progress></progress></li>
+                <!-- 0에서 10까지 게이지가 올라가는것도 가능 -->
+                <li><input type="color" name="" id=""></li>
+
+                <li><button type="button">범용버튼</button></li>
+                <li><button type="submit">전송버튼</button></li>
+                <li><button type="reset">초기화</button></li>
+                <li><button>전송버튼</button></li>
+                <!-- 범용, 초기화는 새로고침이 안됨. 발송하는 용도가 아니기때문. 기능용도. 
+                form안에 button있으면 바로 submit전송된다. form없을 때는 submit쓸일이 없다. -->
+                <li>
+                    <select name="" id="">
+                        <!-- 개발자가 유효성검사로 쓰거나(name)
+                        고유로 제어하기 위해 쓴다.(id) -->
+                        <option value="">선택하세요</option>
+                        <option value="">010</option>
+                        <option value="">011</option>
+                        <option value="">012</option>
+                        <option value="">013</option>
+                        <!-- value는 개발전용. 빈값으로 넣으면 개발자에게 좋다. -->
+                    </select>
+                    <!-- option의 제일 긴 text길이가 select박스의 가로크기로 자동 정해짐. select style=width:100px로 fixed값 줄수있다. 
+                    option 부분은 css만으로는 커스텀안됨
+                -->
+                </li>
+                <li>
+                    <select name="" id=""multiple>
+                        <!-- control누른상태로 여러개 선택가능 -->
+                        <option value="">선택하세요</option>
+                        <option value="">010</option>
+                        <option value="">011</option>
+                        <option value="">012</option>
+                        <option value="">013</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="" id="">
+                        <optgroup lable="선택그룹1">
+                            <!-- 옵션그룹 만들어주는것. 커스텀 안됨 -->
+                            <option value="">선택하세요</option>
+                            <option value="">010</option>
+                            <option value="">011</option>
+                        </optgroup>
+                        <optgroup lable="선택그룹2">
+                            <option value="">012</option>
+                            <option value="">013</option>
+                            <option value="">014</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li>
+                    <input type="radio" name="group" id="a"><label for="a">선택1</label>  <br>
+                    <input type="radio" name="group" id="b"><label for="b">선택2</label> 
+                    <!-- input에서 유일하게 name쓰는건 radio일 때.
+                    같은 name끼리 중 하나가 선택된다.-->
+                    <!-- id는 고유값이라 같은게 나오면 문법오류. form안에서 id="a"는 하나여야 한다. 
+                    input에 뭘 쓰는지 설명하는게 lable . id와 for는 한 쌍으로 가야한다 1:1로. 1:다수가 되면 안됨
+                    for는 label에만 있다. 그래서 label치면 for가 자동 생성됨.
+                    input과 label을 연결하면 글씨를 선택해도 클릭된다.
+                    선택1  라디오버튼 2개중 1번째
+                    -->
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="c" /><label for="c">선택1</label><br />
+                    <input type="checkbox" name="" id="d" /><label for="d">선택2</label><br />
+                    <input type="checkbox" name="" id="e" /><label for="e">선택3</label><br />
+                    <!-- 다중선택이라 name이 필요없다. 문제는 설명해줘야하기에 label을 쓰는 것.
+                    무엇을 선택하는지 정확히 설명해주는것. 시각장애인에게 선택된 input이 무엇인지 설명해줄 수 있다. 
+                    체크상자 해제됨. (label안썼을 때)
+                    (label썼을 때)선택1 체크상자 해제됨. 으로 읽음.
+                    체크박스가 많을 때는 더욱 어렵다. -->
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>

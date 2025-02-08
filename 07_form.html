@@ -8,6 +8,7 @@
 <body>
     <!-- form태그는 기본적으로 감싸는게 좋지만, 어디까지 form으로 감싸야 하는지는 개발자와 소통하는게 좋다. 
     기능 하나 당 form하나. 검색기능의 form-->
+    
     <h2>폼</h2>
     <form action="">
         <fieldset>
@@ -20,7 +21,117 @@
             <!-- 데이터를 전달시켜야 하니 type=submit -->
         </fieldset>
     </form>
+    <br>
+    <br>
+    <h2>폼3</h2>
+    <form action="">
+        <fieldset>
+            <legend>폼3</legend>
+            
+                <table border="1" width="100%">
+                    <caption>폼3 테이블</caption>
+                    <colgroup>
+                        <col style="width:81px" />
+                        <col style="width:81px" />
+                        <col style="width:81px" />
+                        <col style="width:81px" />
+                        <col style="width:81px" />
+                        <col style="width:81px" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </fieldset>
+    </form>
+    <br>
+    <br>
+    <h2>폼4</h2>
+    <form action="">
+        <fieldset>
+            <legend>상세검색</legend>
+                <table border="1" width="100%">
+                    <caption>상세검색 테이블</caption>
+                    <!-- legend, caption은 필수 -->
+                    <colgroup>
+                        <col style="width:177px" />
+                        <col/>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>분류</th>
+                            <td>
+                                <input type="checkbox" name="group4-1" id="category1"><label for="category1">기념품</label>
+                                <input type="checkbox" name="group4-1" id="category2"><label for="category2">도서</label>
+                                <input type="checkbox" name="group4-1" id="category3"><label for="category3">배지</label>
+                                <input type="checkbox" name="group4-1" id="category4"><label for="category4">복식</label>
+                                <input type="checkbox" name="group4-1" id="category5"><label for="category5">시상품</label>
+                                <input type="checkbox" name="group4-1" id="category6"><label for="category6">증명서</label>
+                                <input type="checkbox" name="group4-1" id="category7"><label for="category7">패넌트</label>
+                                <input type="checkbox" name="group4-1" id="category8"><label for="category8">포스터</label>
+                                <input type="checkbox" name="group4-1" id="category9"><label for="category9">기타</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>자료명</th>
+                            <td><input type="text" name="" id=""></td>
+                            <!-- search는 단일검색이다.(게시물 검색, ) 이 경우는  -->
+                        </tr>
+                        <tr>
+                            <th>소장품번호</th>
+                            <td><input type="number" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>국적-시대</th>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>년대</th>
+                            <td><input type="number" name="" id="">YYYY</td>
+                        </tr>
+                        <tr>
+                            <th>입수처&기증자</th>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>공공누리</th>
+                            <td>
+                                <input type="checkbox" name="" id="aa"><label for="aa">제1유형</label>
+                                <input type="checkbox" name="" id="bb"><label for="bb">제2유형</label>
+                                <input type="checkbox" name="" id="cc"><label for="cc">제3유형</label>
+                                <input type="checkbox" name="" id="dd"><label for="dd">제4유형</label>
+                                <input type="checkbox" name="" id="ee"><label for="ee">적용안함</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <button type="reset">초기화</button>
+                    <button type="submit">검색</button>
+                </div>
+        </fieldset>
+    </form>
 
+
+
+
+
+    <br>
+    <br>
     <ul>
         <!-- ul 안에는 li만 올 수 있다. 다른건 올 수 없다. li형제만 올 수 있다. -->
         <li><span>담당부서</span>경영지원실</li>
@@ -35,7 +146,7 @@
                         <span>
                             😎
                             <input type="radio" name="group" id="a">
-                            <label for="a">매우만족</label>
+                            <label for="">매우만족</label>
                         </span>
                         <span>
                             😎
@@ -192,7 +303,7 @@
                     </select>
                 </li>
                 <li>
-                    <input type="radio" name="group" id="a"><label for="a">선택1</label>  <br>
+                    <input type="radio" name="group" id="a"><label for="">선택1</label>  <br>
                     <input type="radio" name="group" id="b"><label for="b">선택2</label> 
                     <!-- input에서 유일하게 name쓰는건 radio일 때.
                     같은 name끼리 중 하나가 선택된다.-->

@@ -1,0 +1,24 @@
+/* 우선순위 */
+/* 0점 : 에스터리스크(전체선택자) */
+* {
+    color: red;
+}
+
+/* 1점 : 요소선택자 */
+div {
+    color: blue;
+}
+
+/* 10점: 클래스 선택자 */
+.specificity {
+    color: green;
+}
+
+/* 100점 : 아이디선택자 */
+#selector {
+    color: orange;
+}
+
+/* 1000점 : 인라인스타일 */
+
+/* 절대점수 : !important */

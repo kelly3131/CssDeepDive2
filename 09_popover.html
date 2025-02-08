@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 모바일 포함 모든 브라우저 다 됨. js안하고 html만으로도 가능 
+        최신스택이라 vscode에서 text자동완성 지원이 아직 안된다. -->
+        <button type="button" popovertarget="dialog">팝업열고/닫기</button>
+        <button type="button" popovertarget="dialog" popovertargetaction="show">팝업열기</button>
+        <button type="button" popovertarget="dialog" popovertargetaction="hide">팝업닫기</button>
+        <!-- popover는 혼자서 열고 닫힘을 지원하는 토글기능 (열기닫기)
+        기본이 토글이지만,  popovertargetaction="show"를 넣으면 열기만 됨 "hide"는 닫기만 됨-->
+        <div popover id="dialog">팝업내용입니다.
+        <button type="button"popovertarget="dialog">닫기</button>
+        <!-- 팝업이 여러개 있을 수 있어서 id로 구분한다 
+        table태그 써도 되지만 보통 div
+    쌤은 동적인 동작 할 때 dialog쓰기도 하지만 기본 팝업은 popover를 쓴다.-->
+        </div>
+    </body>
+    </html>
+</body>
+</html>

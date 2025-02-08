@@ -1,0 +1,18 @@
+/* nast둥지.nasting둥지화시킨다 */
+.nasting {
+    a {
+        color: red;
+        span {
+            color: salmon;
+        }
+    }
+    .em {
+        color: forestgreen
+    }
+    > div {
+        /* 1대손일 때 > 붙인다. */
+         /* > : grater than */
+    }
+}
+/* div > div 자식선택
+div + div 형제선택 */

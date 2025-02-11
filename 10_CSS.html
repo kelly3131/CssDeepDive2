@@ -4,21 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/global.css">
 </head>
 <body>
-    <h2>선택자우선순위</h2>
-    <div class="specificity" id="selector" style="color:pink">우선순위</div>
-    <!-- 자바스크립트로 css를 제어하려면 inline으로 넣어야한다. 자바스크립트는 css를 직접적으로 제어할 수 없기 때문 -->
-
-    <h2>네스팅</h2>
-    <div class="nesting">
+    <details name="css">
+        <summary>선택자우선순위</summary>
+        <div class="specificity" id="selector" style="color:pink">우선순위</div>
+        <!-- 자바스크립트로 css를 제어하려면 inline으로 넣어야한다. 자바스크립트는 css를 직접적으로 제어할 수 없기 때문 -->
+    </details>
+    <details name="css">
+        <summary>네스팅</summary>
+        <div class="nesting">
+            <div>
+              <span>
+                <a href=""><span>링크</span></a>
+                <em class="em">텍스트</em>
+              </span>
+            </div>
+          </div>
+    </details>
+    <details name="css">
+        <summary>Font관련 CSS</summary>
         <div>
-          <span>
-            <a href=""><span>링크</span></a>
-            <em class="em">텍스트</em>
-          </span>
+            <ul>
+                <li style="font-family: dotum">서체종류를 정의</li>
+                <li style="font-family: 'Noto Sans KR', serif">노토산스</li>
+                <!-- ""안에는 ''로, ''안에는 ""넣어야함 -->
+                <!-- 보통 cdn으로 외부폰트 가져다 쓴다. -->
+                <li style="font-size: 12px">폰트크기를 정의</li>
+                <!-- 요새px안쓴다. 모바일에 안좋기때문.
+                    모바일의 경우 기계마다 해상도가 다름. 해상도에 맞는 크기 보여주려면 vw, rem써야함
+                    확장성 때문에 px는 거의 안쓸거다.
+                -->
+                <li style="font-size: 1rem">rem 정의</li>
+                <!-- 설정>글꼴크기>폰트작게, 크게했을 때 px는 고정크기라 변함없지만
+                    rem은 설정에 따라 유동적으로 바뀔 수 있다 -->
+                <li style="font-family: 'Noto Sans KR', serif; font-weight: 300">노토산스 굵기</li>
+                <li>
+                    <h1 style="font-weight:normal">굵은</h1>
+                    <th style="font-weight:normal">굵은</th>
+                    <!-- 서체와 상관 없이 font-weight:normal하면 기본굵기(font-weight:400)으로 바뀐다 -->
+                    <strong style="font-weight:normal">굵은</strong>
+                    <b style="font-weight:normal">굵은</b>
+                </li>
+                <li style="text-align: center;">텍스트 수평정렬, inline요소, inline-block요소, left, right, center</li>
+                <li style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est laborum aperiam blanditiis cupiditate vitae sunt ducimus facilis quod nihil consectetur consequuntur voluptas doloremque natus eaque quo distinctio animi, eum tempore!</li>
+                <!-- <li style="vertical-align: middle"></li>이건 이제 안씀 -->
+                <li style="align-content: center;border:1px solid #000; height: 50px;">특정 높이 안에서 텍스트 수직정렬</li>
+                <!-- align-content은 baseline이 기본. 최신기술이지만 모든 브라우저 가능 -->
+                <li style="color: #934294;">텍스트색상</li>
+                <li style="color: rgba(249, 63, 63, 0.5);">텍스트색상</li>
+                <li style="color: transparent">텍스트색상</li>
+                <!-- 글자영역이 사라지진 않지만 안보임 -->
+                <li style="color: #000"></li>
+                <li style="line-height: 20px"></li>
+                <li style="letter-spacing: -1px"></li>
+                <!-- 피그마의 자간, 줄간격(line-height)값이 있다면 꼭 넣어야한다. 쌓이면 차이가 많이난다. -->
+                <li style="text-decoration: underline; text-decoration-style: wavy;">텍스트 줄꾸밈</li>
+                <li style="text-decoration: underline; text-decoration-style: wavy;">텍스트 줄꾸밈</li>
+                <a href="" style="text-decoration: none;">링크</a>
+                <u style="text-decoration: none;">밑줄</u>
+                <ins style="text-decoration: none;">밑줄</ins>
+            </ul>
+            <div class="text-outline">텍스트의 외곽선을 그리자.</div>
         </div>
-      </div>
+    </details>
+    <details name="css" >
+        <summary>Box Model</summary>
+        텍스트
+        <div class="box">여백정의</div>
+        <div class="box2">여백정의</div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </details>
+    <details name="css" >
+        <summary>shadow</summary>
+        <div class="shadow"></div>
+    </details>
+    <details name="css">
+        <summary>text-shadow</summary>
+        <div class="text-shadow">글씨그림자</div>
+    </details>
+    <details name="css" open>
+        <!-- details여러개일 때 open은 하나만올 수 있다. -->
+        <summary>radius, circle</summary>
+        <div class="radius"></div>
+        <div class="circle"></div>
+    </details>
+    
+
+    
+    
+
 </body>
 </html>

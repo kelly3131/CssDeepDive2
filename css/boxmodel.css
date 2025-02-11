@@ -1,0 +1,66 @@
+.box {
+    width: 200px;
+    aspect-ratio: 1;
+    border: 2px solid red;
+    /*padding: 20px 10px 5px 1px;
+    margin: 20px 10px 5px 1px;
+     20px 10px 5px; 위 좌우 밑. 순서는 12시 기준으로 시계방향 */
+    padding-inline: 10px 20px;
+    /* 수평축. 순서는 왼쪽, 오른쪽. */
+    padding-block: 20px 30px;
+    /* 수직축. 순서는 위, 아래. */
+    /* inline 수평을 향해
+    block 수직을 향해 간다는 개념으로 이해하면 됨 */
+
+    /* 영역을 fix시키면 영역에 padding이 살로 붙는다. 
+    영역을 유지시키고 안쪽으로 padding넣으려면 box-sizing: border-box;
+    영역에 선을 주면 선크기도 포함시켜서 영역크기가 정해진다.
+    */
+    /* 일일이 box-sizing: 쓰기 싷어서 * {box-sizing:border-box}로 전체에 다 적용하기도 함 */
+    
+    /* 언제 margin padding줘야할까?
+    여백 주는 곳에 배경이나 선이 존재한다면 margin (공간을 띄울 때)
+    선 밖에 공간을 줘야하면 margin, 선 안에 공간을 줘야하면 padding
+    
+    배경색 또는 배경이미지 밖은 margin
+    배경색 또는 배경이미지 안쪽은 padding
+
+    */
+
+    /* margin을 줄 때에는 반드시 한 방향으로 줘야 한다. top주면 top으로 계속, bottom이면 bottom으로..
+    왜? 마진이 겹치면 가장 큰 수가 들어간다. 더블마진버그. 쌤은 margin top만 쓰심
+    패딩은 안겹침.
+     */
+    margin-bottom: 20px;
+}
+.box2 {
+    width: 200px;
+    aspect-ratio: 1;
+    margin-top: 10px;
+    border: 2px solid blue;
+    border-top: 1px solid #000;
+    border-right: 2px dashed orange;
+    border-bottom: 3px dotted sandybrown;
+    /* 백그라운드 그라디언트로 dashed, dotted 간격 조절가능. border로는 조절못함; */
+    border-left: 3px double #000;
+    /* 잘 안쓰니 무시해도 됨 */
+}
+.box3 {
+    /* 순서는 padding과 같다. 위 오른쪽 아래 왼쪽. 
+    브라우저에서는 선과 선이 겹쳐지면 사선으로 자른다. */
+    width: 50px;
+    box-sizing: border-box;
+    border-width: 50px;
+    border-style: solid;
+    border-color: transparent transparent orange transparent;
+}
+.box4 {
+    /* 순서는 padding과 같다. 위 오른쪽 아래 왼쪽. 
+    브라우저에서는 선과 선이 겹쳐지면 사선으로 자른다. */
+    width: 50px;
+    box-sizing: border-box;
+    border-width: 50px;
+    border-style: solid;
+    border-color: pink paleturquoise orange yellowgreen;
+}
+

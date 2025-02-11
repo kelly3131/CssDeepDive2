@@ -6,11 +6,15 @@
     <title>온라인서식</title>
 </head>
 <body>
-    <!-- form태그는 기본적으로 감싸는게 좋지만, 어디까지 form으로 감싸야 하는지는 개발자와 소통하는게 좋다. 
-    기능 하나 당 form하나. 검색기능의 form-->
-    
     <h2>폼</h2>
+    <!-- form태그는 기본적으로 감싸는게 좋지만, 어디까지 form으로 감싸야 하는지는 개발자와 소통하는게 좋다. 
+    기능 하나 당 form하나로 감싸야 한다. ex)검색기능의 form, 서식기능의 form...-->
     <form action="">
+        <!-- <form>의 속성들
+            action 속성: 보안때문에 노출 잘 안시킨다.  
+            method 속성: 잘 안씀. 스크립트로 데이터 전송하기 때문에 <form>만 쓴다.
+            onsubmit=함수: 프론트엔드에서 사용하는 것이라 퍼블에서는 안씀.
+            -->
         <fieldset>
             <legend>게시물검색</legend>
             <select name="" id="">
@@ -18,7 +22,7 @@
             </select>
             <input type="search" name="" id="" placeholder="검색어를 입력해 주세요.">
             <button type="submit">검색</button>
-            <!-- 데이터를 전달시켜야 하니 type=submit -->
+            <!-- 입력된 데이터를 전달시켜야 하니 type=submit -->
         </fieldset>
     </form>
     <br>
@@ -183,17 +187,20 @@
 
     <h2>공통속성</h2>
     <input type="text" name="" id=""value="입력된 값">
-    <input type="radio" name="" id="" value="">
-    <!-- value:초기값.input에 공통적으로 가져올 수 있다.  체크되는 것들은 value값이 표현되지는 않지만 개발자들이 쓴다. 데이터의 이름을 가져오기 위해서. -->
+    <input type="radio" name="" id="" value="표시는 안되지만 개발자들이 쓴다">
+    <!--  체크되는 것들은 value값이 표현되지는 않지만 개발자들이 쓴다. 데이터의 이름을 가져오기 위해서. -->
     <br>
     <input type="text" name="" id="" placeholder="비밀번호8자리입력">
     <br>
-    <form action="">
-        <input type="text" name="" id="" required><br>
-        <input type="email" name="" id="" required><br>
-        <!-- required 필수입력일 때 넣기. 유효성 검사할 때 좋다. form으로 감싼 후 required를 넣어야 툴팁이 뜬다. 
-            form안에 required넣을 시, 전송버튼 눌러도 다음으로 안넘어감. required안쓰면 스크립트로 @넣었는지 체크 계속 해줘야함. -->
-        <button>전송</button>
+    <form>
+        <fieldset>
+            <legend>제목</legend>
+            <input type="text" name="" id="" required><br>
+            <input type="email" name="" id="" required><br>
+            <!-- required 필수입력일 때 넣기. 유효성 검사할 때 좋다. form으로 감싼 후 required를 넣어야 툴팁이 뜬다. 
+                form안에 required넣을 시, 전송버튼 눌러도 다음으로 안넘어감. required안쓰면 스크립트로 @넣었는지 체크 계속 해줘야함. -->
+            <button>전송</button>
+        </fieldset>
     </form>
     <br>
     <br>
@@ -230,7 +237,7 @@
                 <li><input type="password" name="" id="">암호화된 글상자</li>
                 <!-- 동그라미는 디자인 못바꾼다. font-size로 크기는 바꿀 수 있다. 개발자들은 native를 젤 좋아한다. 이미 기능이 좋다. -->
                 <li><input type="file" name="" id="">첨부파일</li>
-                <!-- 첨부파일 선택시 라이브러리 선택 안나왔는데 이제는 나온다 -->
+                <!-- 모바일에서 첨부파일 선택시 사진찍기, 라이브러리 선택 안나왔는데 버전업되며 나오게됨 -->
                 <li><input type="url" name="" id="">주소입력</li>
                 <!-- url전용input에 .com, www사용할 수 있다 -->
                 <li><input type="email" name="" id="">이메일입력</li>
@@ -251,7 +258,7 @@
                     cols10면 10글자이지만 언어마다 다르다(더 들어갈수도)너비값은 고정가능
                 rows는 줄 개수. 보통 안쓴다. -->
                 <li><input type="range" name="" id="">핸들링</li>
-                <!-- 핸들링, 게이지, 배경 모두 커스텀 가능 -->
+                <!-- 핸들, 게이지, 배경 모두 커스텀 가능 -->
                 <li><progress></progress></li>
                 <!-- 0에서 10까지 게이지가 올라가는것도 가능 -->
                 <li><input type="color" name="" id=""></li>

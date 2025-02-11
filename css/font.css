@@ -1,0 +1,20 @@
+/* 폰트관련 css */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1rem;
+}
+.text-outline {
+    font-family: "Noto Sans KR", serif;
+    font-size: 20rem;
+    color: #000;
+    font-weight: 900;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: blueviolet;
+    /* -webkit-엔진 이름. 크롬(웨일) 엣지 사파리 전용 코드. 
+    모든 브라우저에서 다 되지만(can I use에 된다고 나옴) 공식문서에는 허용안됨*/
+    paint-order: stroke fill;
+    /* 채우는 순서. stroke를 먼저 채우고 fill한다는 것 */
+    color: white;
+}
